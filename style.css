@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Courier+Prime&display=swap');
+
+body {
+    font-family: 'Courier Prime', monospace;
+    background-color: #222222; /* Dark grey */
+    color: #FFFFFF; /* White */
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    text-align: center; /* Default centering for most content */
+}
+
+nav {
+    padding: 15px 0;
+    background-color: #333333; /* Slightly lighter dark grey for nav */
+    border-bottom: 1px solid #FFFFFF; /* White border */
+}
+
+nav a {
+    color: #FFFFFF;
+    text-decoration: none;
+    padding: 0 15px;
+    display: inline-block;
+}
+
+nav a:hover {
+    background-color: #555555; /* Hover effect */
+}
+
+hr {
+    border: none;
+    border-top: 1px solid #FFFFFF; /* White line */
+    margin: 20px auto;
+    width: 80%;
+    max-width: 800px; /* Match content width */
+}
+
+h1, h2, h3 {
+    color: #FFFFFF;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+p {
+    margin-bottom: 10px;
+    max-width: 800px; /* Limit paragraph width for readability */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+ul {
+    list-style-type: none; /* Remove default bullet points */
+    padding: 0;
+    max-width: 800px; /* Limit list width */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+ul p { /* Target paragraphs inside lists */
+    margin: 5px 0;
+}
+
+a {
+    color: #FFFFFF; /* White links */
+    text-decoration: underline;
+}
+
+a:hover {
+    color: #CCCCCC; /* Slightly grey on hover */
+}
+
+dl {
+    text-align: left; /* Align definition list content to left */
+    max-width: 600px; /* Limit width for readability */
+    margin: 20px auto; /* Center the dl block */
+    padding: 0 10px;
+}
+
+dt {
+    font-weight: bold;
+    color: #FFFFFF;
+    margin-top: 15px;
+    margin-bottom: 5px;
+}
+
+dd {
+    margin-left: 20px;
+    margin-bottom: 10px;
+    color: #EEEEEE; /* Slightly off-white for definition descriptions */
+}
+
+footer {
+    padding: 15px 0;
+    background-color: #333333; /* Same as nav */
+    border-top: 1px solid #FFFFFF; /* White border */
+    margin-top: 20px;
+}
+
+/* Specific adjustments for the 404 page main content */
+main {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 10px;
+    box-sizing: border-box;
+}
