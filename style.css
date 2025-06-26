@@ -2,18 +2,21 @@
 
 body {
     font-family: 'Courier Prime', monospace;
-    background-color: #222222; /* Dark grey */
-    color: #FFFFFF; /* White */
+    background-color: #111111;
+    color: #FFFFFF;
     margin: 0;
     padding: 0;
     line-height: 1.6;
-    text-align: center; /* Default centering for most content */
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
 nav {
     padding: 15px 0;
-    background-color: #333333; /* Slightly lighter dark grey for nav */
-    border-bottom: 1px solid #FFFFFF; /* White border */
+    background-color: #1a1a1a;
+    border-bottom: 1px solid #FFFFFF;
 }
 
 nav a {
@@ -24,15 +27,15 @@ nav a {
 }
 
 nav a:hover {
-    background-color: #555555; /* Hover effect */
+    background-color: #2a2a2a;
 }
 
 hr {
     border: none;
-    border-top: 1px solid #FFFFFF; /* White line */
+    border-top: 1px solid #FFFFFF;
     margin: 20px auto;
     width: 80%;
-    max-width: 800px; /* Match content width */
+    max-width: 800px;
 }
 
 h1, h2, h3 {
@@ -43,36 +46,36 @@ h1, h2, h3 {
 
 p {
     margin-bottom: 10px;
-    max-width: 800px; /* Limit paragraph width for readability */
+    max-width: 800px;
     margin-left: auto;
     margin-right: auto;
 }
 
 ul {
-    list-style-type: none; /* Remove default bullet points */
+    list-style-type: none;
     padding: 0;
-    max-width: 800px; /* Limit list width */
+    max-width: 800px;
     margin-left: auto;
     margin-right: auto;
 }
 
-ul p { /* Target paragraphs inside lists */
+ul p {
     margin: 5px 0;
 }
 
 a {
-    color: #FFFFFF; /* White links */
+    color: #FFFFFF;
     text-decoration: underline;
 }
 
 a:hover {
-    color: #CCCCCC; /* Slightly grey on hover */
+    color: #CCCCCC;
 }
 
 dl {
-    text-align: left; /* Align definition list content to left */
-    max-width: 600px; /* Limit width for readability */
-    margin: 20px auto; /* Center the dl block */
+    text-align: left;
+    max-width: 600px;
+    margin: 20px auto;
     padding: 0 10px;
 }
 
@@ -86,20 +89,67 @@ dt {
 dd {
     margin-left: 20px;
     margin-bottom: 10px;
-    color: #EEEEEE; /* Slightly off-white for definition descriptions */
+    color: #EEEEEE;
 }
 
 footer {
     padding: 15px 0;
-    background-color: #333333; /* Same as nav */
-    border-top: 1px solid #FFFFFF; /* White border */
-    margin-top: 20px;
+    background-color: #1a1a1a;
+    border-top: 1px solid #FFFFFF;
+    margin-top: auto;
 }
 
-/* Specific adjustments for the 404 page main content */
 main {
     max-width: 800px;
     margin: 0 auto;
     padding: 10px;
     box-sizing: border-box;
+    flex-grow: 1;
+}
+
+.back-to-top {
+    color: #FFFFFF;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.blinking-cursor-container {
+    position: relative;
+    display: inline-block;
+    font-size: 1.2em;
+    width: 1em;
+    height: 1em;
+    vertical-align: middle;
+    overflow: hidden;
+}
+
+.blinking-cursor-solid,
+.blinking-cursor-outline {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    line-height: 1;
+}
+
+.blinking-cursor-solid {
+    animation: blink-solid 1s step-end infinite;
+}
+
+.blinking-cursor-outline {
+    animation: blink-outline 1s step-end infinite;
+}
+
+@keyframes blink-solid {
+    0%, 49% { opacity: 1; }
+    50%, 100% { opacity: 0; }
+}
+
+@keyframes blink-outline {
+    0%, 49% { opacity: 0; }
+    50%, 100% { opacity: 1; }
 }
